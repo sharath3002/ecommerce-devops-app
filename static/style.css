@@ -1,0 +1,50 @@
+body {
+    font-family: Arial;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+a {
+    color: #ffcc00;
+    margin: 0 5px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #aaa;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}

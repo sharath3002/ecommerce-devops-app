@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop DevOps</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Shop with DevOps</h1>
+        {% if username %}
+            <p>Welcome, {{ username }} | <a href="{{ url_for('logout') }}">Logout</a></p>
+        {% else %}
+            <p><a href="{{ url_for('login') }}">Login</a> | <a href="{{ url_for('signup') }}">Signup</a></p>
+        {% endif %}
+    </header>
+    {% block content %}{% endblock %}
+</body>
+</html>
