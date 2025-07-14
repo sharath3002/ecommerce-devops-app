@@ -1,8 +1,10 @@
 from flask import Flask, render_template, redirect, request, session, url_for
 from auth import users, register_user, authenticate_user
 from data import PRODUCTS
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 app.secret_key = 'your-secret-key'
 
 @app.route('/')
@@ -39,4 +41,3 @@ def products():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
-
